@@ -1,0 +1,10 @@
+--    checklist for running the job
+
+--    ./All_clear.sh clears the folder completely 
+
+--    run either edit_arc-local.sh or edit_local-arc.sh depending on where the job will be ran
+
+--    ./Allrun works locally
+--    job.sh works on ARC3
+
+

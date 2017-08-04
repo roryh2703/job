@@ -1,0 +1,33 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           | Web:      www.OpenFOAM.org
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out surface files with interpolated field data in VTK format, e.g.
+    cutting planes, iso-surfaces and patch boundary surfaces.
+
+    This file includes a selection of example surfaces, each of which the user
+    should configure and/or remove.
+
+\*---------------------------------------------------------------------------*/
+     
+   type            forceCoeffs;
+        libs ( "libforces.so" );
+        writeControl   timeStep;
+        writeInterval  1;
+        patches         (CYLINDERWALL);
+        rho             rhoInf;
+        log             true;
+        rhoInf          999.4;
+        liftDir         (0 1 0);
+        dragDir         (-1 0 0);
+        CofR            (0 0 0.075398);
+        pitchAxis       (1 0 0);
+        magUInf         0.0195;
+        lRef            0.024;
+        Aref            0.00361912;        // =z_len*D
+
+// ************************************************************************* //

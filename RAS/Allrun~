@@ -1,0 +1,17 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+#. /usr/not-backed-up/cfd/job16/functions/RunFunctions            #LOCAL
+. /nobackup/scrh/cfd/job16/functions/RunFunctions                 #ARC
+
+# Make dummy 0 directory
+cp -r 0.orig 0
+
+runApplication decomposePar
+
+runParallel potentialFoam -initialiseUBCs
+
+runParallel `getApplication`
+
+#------------------------------------------------------------------------------
