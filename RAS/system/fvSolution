@@ -20,8 +20,8 @@ solvers
     p
     {
         solver          GAMG;
-        tolerance       1e-07;
-        relTol          0.1;
+        tolerance       1e-11;
+        relTol          0.0001;
         smoother        GaussSeidel;
     }
 
@@ -48,7 +48,7 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 0;
+    nNonOrthogonalCorrectors 3;
 }
 
 potentialFlow
@@ -59,7 +59,7 @@ potentialFlow
 relaxationFactors
 {
     p               0.3;
-    U               0.5;
+    U               0.7;
     nuTilda         0.5;
 }
 
