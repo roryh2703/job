@@ -60,7 +60,7 @@ PIMPLE
     momentumPredictor yes;
     nCorrectors       2;
     nOuterCorrectors  2;
-    nNonOrthogonalCorrectors 0;
+    nNonOrthogonalCorrectors 0;      // set to 0 because hex mesh used
 }
 
 
