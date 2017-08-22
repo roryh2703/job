@@ -35,7 +35,7 @@ solvers
     {
         $p;
         smoother        DICGaussSeidel;
-        tolerance       1e-06;
+        tolerance       1e-08;
         relTol          0;
     }
 
@@ -43,14 +43,14 @@ solvers
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-05;
+        tolerance       1e-08;
         relTol          0.1;
     }
 
     "(U|k|nuTilda)Final"
     {
         $U;
-        tolerance       1e-05;
+        tolerance       1e-06;
         relTol          0;
     }
 }
@@ -58,10 +58,44 @@ solvers
 PIMPLE
 {
     momentumPredictor yes;
-    nCorrectors       2;
-    nOuterCorrectors  2;
+    nCorrectors       3;    // Inner Loops ( Pressure Correction )
+    nOuterCorrectors  20;    // Outer Loops ( Pressure - Momentum Correction )
     nNonOrthogonalCorrectors 0;      // set to 0 because hex mesh used
+    turbOnFinalIterOnly  false;
+
+    residualControl
+    {
+        p
+        {
+            relTol 0;   
+            // If this initial tolerance is reached leave outerCorrector
+            tolerance 1e-8;
+        }
+
+        U
+	{
+            relTol    0;
+            // If this initial tolerance is reached leave outerCorrector
+            tolerance 1e-6;
+        }
+    }
 }
 
+/*
+relaxationFactors           //not sure how these work
+{
+    fields
+    {
+        p        0.4;
+        pFinal   0.4;    // Last outer loop
+    }
+
+    equations
+    {
+        U        0.6;
+        UFinal   0.6;    // Last outer loop
+    }
+}
+*/
 
 // ************************************************************************* //

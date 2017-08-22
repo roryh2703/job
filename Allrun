@@ -2,7 +2,7 @@
 cd ${0%/*} || exit 1    # Run from this directory
 
 # Source tutorial run functions
-. /nobackup/scrh/cfd/job/functions/RunFunctions       
+. /usr/not-backed-up/cfd/job/functions/RunFunctions       
 
 cloneParallelCase()
 {
@@ -23,16 +23,16 @@ cloneParallelCase()
 
 
 # Do the Spalart-Allmaras steady-state case
-(cd RAS && . /nobackup/scrh/cfd/job/functions/foamRunTutorials)
+(cd RAS && . /usr/not-backed-up/cfd/job/functions/foamRunTutorials)
 
 if ! isTest $@
 then
     # Clone the steady-state case to the LES case
     cloneParallelCase RAS LES
 
-    # Do the LES case
+    # LES case
     cp lesFiles/Allrun LES/
-    (cd LES && . /nobackup/scrh/cfd/job/functions/foamRunTutorials)
+    (cd LES && . /usr/not-backed-up/cfd/job/functions/foamRunTutorials)
 fi
 
 #------------------------------------------------------------------------------

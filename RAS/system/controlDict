@@ -17,7 +17,7 @@ FoamFile
 
 libs (
        "libforces.so"
-       "/nobackup/scrh/libraries/libfixedMeanValue.so"
+       "/usr/not-backed-up/cfd/fixedMeanVal/libfixedMeanValue.so"
        "libOpenFOAM.so" 
        "libfieldFunctionObjects.so"
  );  
@@ -31,15 +31,15 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         500;
+endTime         50;
 
-deltaT          1;
+deltaT          1e-6;
 
-writeControl    timeStep;
+writeControl    runTime;
 
-writeInterval   500;
+writeInterval   50;
 
-purgeWrite      0;
+purgeWrite      1;
 
 writeFormat     ascii;
 

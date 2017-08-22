@@ -2,7 +2,7 @@
 cd ${0%/*} || exit 1    # Run from this directory
 
 # Source tutorial clean functions
-. /nobackup/scrh/cfd/job/functions/CleanFunctions       
+. /usr/not-backed-up/cfd/job/functions/CleanFunctions       
 
 # remove surface
 rm -f constant/triSurface/motorBike.obj.gz

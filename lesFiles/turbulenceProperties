@@ -49,7 +49,7 @@ LES
             }
             maxDeltaRatio   1.1;
         }
-        Cdelta          0.158;
+        Cdelta          0.158;      //Cdelta = 0.158 is default
     }
 
     vanDriestCoeffs
@@ -71,8 +71,8 @@ LES
             maxDeltaRatio   1.1;
         }
 
-        Aplus           26;
-        Cdelta          0.158;
+        Aplus           26;         //van Driest constant
+        Cdelta          0.158;      //Cdelta = 0.158 is default
     }
 
     smoothCoeffs

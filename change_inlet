@@ -1,0 +1,27 @@
+#    script to change the velocity profile at the inlet
+
+cd LES
+
+for d in processor*/; do
+
+echo $d
+
+cd $d
+
+x="ls | sort -n | tail -n1 | head -n1"
+y=`eval $x`
+echo $y
+
+mkdir old_time_files
+mv [0-9]* old_time_files
+scp -r old_time_files/$y $y
+
+cd $y
+
+gunzip U.gz
+sed -i -- 's/uniform (0.195 0 0)/uniform (0.16887 0 -0.0975)/g' U
+#sed -i -- 's/uniform (0.16887 0 -0.0975)/uniform (0.195 0 0)/g' U
+gzip U
+
+cd ../..
+done
