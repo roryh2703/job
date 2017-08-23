@@ -35,7 +35,7 @@
 make="make"
 
 # Source tutorial run functions
-. /usr/not-backed-up/cfd/job/functions/RunFunctions
+. /nobackup/scrh/cfd/job/functions/RunFunctions
 
 thisScript=$0
 if [ "/${thisScript#/}" != "$thisScript" ]
