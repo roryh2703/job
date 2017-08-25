@@ -38,9 +38,9 @@ numberOfSubdomains  72;
 //  for a balanced number of particles in a lagrangian simulation.
 // weightField dsmcRhoNMean;
 
-//method          scotch;
+method          scotch;
 // method          hierarchical;
-method          simple;
+//method          simple;
 // method          metis;
 // method          manual;
 // method          multiLevel;
@@ -71,15 +71,12 @@ multiLevelCoeffs
 
 // Desired output
 
-*/
 simpleCoeffs
 {
     n           (6 6 2);
     delta       0.001;
 }
-
 /*
-
 hierarchicalCoeffs
 {
     n           (1 2 1);
@@ -99,7 +96,7 @@ metisCoeffs
     );
   
 }
-
+*/
 scotchCoeffs
 {
     //processorWeights
@@ -112,7 +109,7 @@ scotchCoeffs
     //writeGraph  true;
     //strategy "b";
 }
-
+/*
 manualCoeffs
 {
     dataFile    "decompositionData";
