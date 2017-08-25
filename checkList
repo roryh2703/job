@@ -2,9 +2,9 @@ ______________checklist for running the job______________
 
 --    ./All_clear.sh clears the folder completely 
 
---    Check job run time (48 hours?)
+--    Check job run time (i.e. 48 hours?)
 
---    run either edit_arc-local.sh or edit_local-arc.sh depending on where the job will be ran
+--    run either ./edit_arc-local.sh or ./edit_local-arc.sh depending on where the job will be ran
 
 --    ./Allrun works locally
 --    job.sh works on ARC3
