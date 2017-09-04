@@ -74,6 +74,16 @@ functions
     #includeFunc    probes_spectra_us5D
     #includeFunc    probes_spectra_us10D
 
+
+Q1
+{
+        type            Q;
+        libs            ("libfieldFunctionObjects.so");
+        writeControl    runTime;
+        writeInterval   0.1;        
+}
+
+
 fieldAverage1
 {
         type            fieldAverage;
