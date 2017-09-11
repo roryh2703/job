@@ -82,7 +82,7 @@ PIMPLE
 }
 
 /*
-relaxationFactors           //not sure how these work
+relaxationFactors          
 {
     fields
     {

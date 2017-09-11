@@ -11,5 +11,5 @@ ls -d processor* | xargs -I {} rm -rf ./{}/0 $1
 ls -d processor* | xargs -I {} mv ./{}/5 ./{}/0 $1
 ls -d processor* | xargs -I {} rm -rf ./{}/0/uniform $1
 
-mpirun -np 72 pimpleFoam -parallel 
+mpirun -np 72 pimpleFoam -parallel >> log
 
