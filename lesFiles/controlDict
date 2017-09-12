@@ -18,7 +18,7 @@ FoamFile
 
 libs (
         "libforces.so"
-	"/nobackup/scrh/libraries/libfixedMeanValue.so"
+	"/usr/not-backed-up/cfd/fixedMeanVal/libfixedMeanValue.so"
  );  		 
 
 
@@ -38,7 +38,7 @@ writeControl    adjustableRunTime;
 
 writeInterval   0.1;
 
-purgeWrite      0;
+purgeWrite      1;
 
 writeFormat     ascii;
 
@@ -80,7 +80,8 @@ Q1
         type            Q;
         libs            ("libfieldFunctionObjects.so");
         writeControl    runTime;
-        writeInterval   0.1;        
+        writeInterval   0.1;   
+        purgeWrite      1;     
 }
 
 
