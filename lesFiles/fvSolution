@@ -21,7 +21,7 @@ solvers
     {
         solver          GAMG;
         tolerance       0;
-        relTol          0.1;
+        relTol          0.01;
         smoother        GaussSeidel;
         nPreSweeps      0;
         nPostSweeps     2;
@@ -59,7 +59,7 @@ PIMPLE
 {
     momentumPredictor yes;
     nCorrectors       3;    // Inner Loops ( Pressure Correction )
-    nOuterCorrectors  20;    // Outer Loops ( Pressure - Momentum Correction )
+    nOuterCorrectors  10;    // Outer Loops ( Pressure - Momentum Correction )
     nNonOrthogonalCorrectors 0;      // set to 0 because hex mesh used
     turbOnFinalIterOnly  false;
 
@@ -81,21 +81,21 @@ PIMPLE
     }
 }
 
-/*
+
 relaxationFactors          
 {
     fields
     {
-        p        0.4;
-        pFinal   0.4;    // Last outer loop
+        p        0.6;
+        pFinal   1;    // Last outer loop
     }
 
     equations
     {
-        U        0.6;
-        UFinal   0.6;    // Last outer loop
+        U        0.8;
+        UFinal   1;    // Last outer loop
     }
 }
-*/
+
 
 // ************************************************************************* //
