@@ -1,0 +1,8 @@
+______________description of the case______________
+
+First run potentialFoam (no viscosity) top initialise field,
+
+Second, the SA RAS turbulence model with simpleFoam (steady state), 
+
+Then LES with pimpleFoam.
+

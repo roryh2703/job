@@ -17,7 +17,7 @@ FoamFile
 
 libs (
        "libforces.so"
-       "/usr/not-backed-up/cfd/fixedMeanVal/libfixedMeanValue.so"
+       "/nobackup/scrh/libraries/libfixedMeanValue.so"
        "libOpenFOAM.so" 
        "libfieldFunctionObjects.so"
  );  
