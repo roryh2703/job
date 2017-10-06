@@ -11,7 +11,7 @@
 #$ -l h_rt=48:00:00       # time needed
 
 #    How many nodes, how many processors per node (16 cores per 1 node)
-#$ -l nodes=3,ppn=24 
+#$ -l nodes=4,ppn=24 
 
 module switch intel/17.0.1 gnu/6.3.0
 module add openfoam/4.1.0

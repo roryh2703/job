@@ -59,7 +59,7 @@ PIMPLE
 {
     momentumPredictor yes;
     nCorrectors       3;    // Inner Loops ( Pressure Correction )
-    nOuterCorrectors  10;    // Outer Loops ( Pressure - Momentum Correction )
+    nOuterCorrectors  5;    // Outer Loops ( Pressure - Momentum Correction )
     nNonOrthogonalCorrectors 0;      // set to 0 because hex mesh used
     turbOnFinalIterOnly  false;
 

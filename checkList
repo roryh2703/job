@@ -9,4 +9,6 @@ ______________checklist for running the job______________
 --    ./Allrun works locally
 --    job.sh works on ARC3
 
+-- Push to github before running on ARC
+
 
