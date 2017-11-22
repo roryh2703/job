@@ -73,6 +73,7 @@ functions
     #includeFunc    probesX3TransverseU
     #includeFunc    probes_spectra_us5D
     #includeFunc    probes_spectra_us10D
+    #includeFunc    probes_spectra_10D_indie
 
 
 Q1

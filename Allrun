@@ -20,8 +20,6 @@ cloneParallelCase()
     fi
 }
 
-
-
 # Do the Spalart-Allmaras steady-state case
 (cd RAS && . /nobackup/scrh/cfd/job/functions/foamRunTutorials)
 

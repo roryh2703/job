@@ -18,5 +18,5 @@ module add openfoam/4.1.0
 source $FOAM_SRC_FILE
 
 cd LES
-mpirun -np 72 pimpleFoam -parallel
+mpirun -np 72 pimpleFoam -parallel >> log
 

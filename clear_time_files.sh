@@ -1,12 +1,11 @@
 #!/bin/bash
 #    script removes all time directories apart from latest and 0
 
+module switch intel gnu/4.9.1
+module add openfoam/4.1.0
+source $FOAM_SRC_FILE
 
-#module switch intel gnu/4.9.1
-#module add openfoam/4.1.0
-#source $FOAM_SRC_FILE
-
-of4
+cd LES
 
 for d in processor*/; do
 echo $d

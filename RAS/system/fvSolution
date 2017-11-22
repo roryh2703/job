@@ -48,7 +48,7 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 3;
+    nNonOrthogonalCorrectors 2;
 }
 
 potentialFlow

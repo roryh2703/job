@@ -58,9 +58,9 @@ solvers
 PIMPLE
 {
     momentumPredictor yes;
-    nCorrectors       3;    // Inner Loops ( Pressure Correction )
-    nOuterCorrectors  5;    // Outer Loops ( Pressure - Momentum Correction )
-    nNonOrthogonalCorrectors 0;      // set to 0 because hex mesh used
+    nCorrectors       2;    // Inner Loops ( Pressure Correction )
+    nOuterCorrectors  2;    // Outer Loops ( Pressure - Momentum Correction )
+    nNonOrthogonalCorrectors 1;      // set to 0 because hex mesh used
     turbOnFinalIterOnly  false;
 
     residualControl
